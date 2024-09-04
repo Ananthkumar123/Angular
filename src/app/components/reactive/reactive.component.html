@@ -1,0 +1,50 @@
+<body>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="col-md-6">
+            <div class="card p-4">
+                <h2 class="mb-4 text-center">Registration Form</h2>
+
+                <form [formGroup]="registrationForm" (ngSubmit)="postdata()">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter your username" required 
+                            formControlName="username"  [class.is-invalid]=" username.invalid && username.touched">
+                            <small style="color: red;" [class.d-none]="username.untouched || username.valid">
+                                Enter ur name <sub>*</sub></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password"
+                            required formControlName="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm-password"
+                            placeholder="Confirm your password" required formControlName="cpassword">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city" placeholder="Enter your city" required
+                            formControlName="city">
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" class="form-control" id="state" placeholder="Enter your state" required
+                            formControlName="state">
+                    </div>
+                    <div class="form-group">
+                        <label for="pincode">Pincode</label>
+                        <input type="text" class="form-control" id="pincode" placeholder="Enter your pincode" required
+                            formControlName="pincode">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" style="margin-right: 3%;">Register</button>
+                    <button type="submit" class="btn btn-danger">display</button>
+
+
+                </form>
+                 
+            </div>
+
+        </div>
+
+    </div>

@@ -1,0 +1,15 @@
+<h1>two way-databinding works!</h1>
+<!-- 
+username <input type="text" placeholder="enter ur name" #username>
+<button type="button" (click)="passdata(username)">save</button> <br>
+ My user name is : {{result}} -->
+
+
+ <input type="text" placeholder="enter something" [(ngModel)]="text"> <br>
+my user is : {{text}} <br>
+
+<h1>Without ng model using template reference </h1>
+
+<input type="text" placeholder="emter ur name "#med>
+<button class="btn btn-primary" style="margin-left: 4%;" (click)="pass(med)">submit</button>
+<p>your name :{{result}}</p>

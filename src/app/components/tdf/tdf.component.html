@@ -1,0 +1,67 @@
+ 
+<body>
+    <h1 align="center"style =color:red>Registration Form</h1>
+    <!-- used for text in a middle of the page -->
+    <div class="container mt-5">  
+        <form #userForm="ngForm" (ngSubmit)="postdata(userForm)">
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col-md-6">
+                
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" ngModel name="name">
+                    </div>
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="mailid">Mail ID:</label>
+                        <input type="email" class="form-control" id="mailid" placeholder="Enter your email"ngModel name="emailid">
+                    </div>
+                    <!-- Phone Number Field -->
+                    <div class="form-group">
+                        <label for="phonenumber">Phone Number:</label>
+                        <input type="text" class="form-control" id="phonenumber" placeholder="Enter your phone number" ngModel name="num">
+                    </div>
+                
+            </div>
+            <!-- Right Column -->
+            <div class="col-md-6">
+               
+                    <!-- Gender Field -->
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="male" ngModel name="gender">
+                                <label class="form-check-label" for="male">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="female" value="female" ngModel name="gender">
+                                <label class="form-check-label" for="female">Female</label>
+                            </div>
+                        </div>
+                    </div> <br>
+                    <!-- Dropdown Field -->
+                    <div class="form-group">
+                        <label for="dropdown" > Select an option:</label>
+                        <select class="form-control" id="dropdown"   ngModel name="dropdown">
+                            
+                            <option>java</option>
+                            <option>angular</option>
+                            <option>html/css</option>
+                        </select>
+                    </div><br><br><br><br>
+                    <!-- Submit Button -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-outline-primary" >Submit</button>
+                    </div>
+             
+            </div>
+        </div>
+    </form>
+    </div>
+    
+    {{userForm.value |json}}
+</body>
+ 

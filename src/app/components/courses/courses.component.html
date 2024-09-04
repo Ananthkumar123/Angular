@@ -1,0 +1,25 @@
+<p>coding hub </p>
+
+
+ <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">id </th>
+            <th scope="col">course </th>
+            <th scope="col">fee</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let y of courses" >
+            <!-- <td>{{y.course_name}}</td> -->
+            <td>{{y.id}}</td>
+            <td >  <a href="javascript:void(0)" (click)="press(y.course_name)">{{y.course_name}}</a></td>
+            <td>{{y.fee}}</td>
+
+             
+          </tr>
+           
+        </tbody>
+      </table>
+     

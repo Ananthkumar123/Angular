@@ -1,0 +1,51 @@
+
+
+<h1 *ngIf="check" style="color:blueviolet;">ananth kumar</h1>
+<p>if works!</p>
+
+<p *ngFor="let x of courses;index as i  ">offerby coding hub {{x}} ---{{i}}</p>
+<h4 *ngFor="let x of courses;even as ev">even is {{ev}}</h4>
+
+<h3 *ngFor="let y of emp|keyvalue">array is :{{y.key}} ---{{y.value|json}}</h3> <br>
+
+<h5 *ngFor="let y of emp">
+     {{y.name}}, 
+    {{y.age}}
+    {{y.role}}</h5>
+<br>
+    <!-- <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">name </th>
+            <th scope="col">role</th>
+            <th scope="col">age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let y of emp" >
+            <td>{{y.id}}</td>
+            <td>{{y.name}}</td>
+            <td>{{y.role}}</td>
+            <td>{{y.age}}</td>
+          </tr>
+           
+        </tbody>
+      </table>
+
+       -->
+      <span *ngIf="isvalid then gj ;else other"> </span>
+      <ng-template #gj> 
+        <h1 > this is true part </h1>
+      </ng-template>
+
+      <ng-template  #other >
+        <h1>else</h1>else part </ng-template>
+       
+        <br> <br>
+        <div class='row' [ngSwitch]="selectedValue">
+
+          <div *ngSwitchCase=" 'One' ">One is Pressed</div>
+          <div *ngSwitchCase=" 'Two' ">Two is Selected</div>
+          <div *ngSwitchDefault>Default Option</div>
+          </div>

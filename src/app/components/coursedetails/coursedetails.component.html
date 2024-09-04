@@ -1,0 +1,20 @@
+<p>coursedetails works!</p>
+
+<table class="table table-bordered">
+    <thead>
+      <tr> 
+        <th scope="col">course </th>
+        <th scope="col">fee</th>
+         
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let y of courses" >
+        
+        <td>{{y.course_name}}</td>
+        <td>{{y.fee}}</td>
+         
+      </tr>
+       
+    </tbody>
+  </table>
